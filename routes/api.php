@@ -16,6 +16,9 @@ use Illuminate\Http\Request;
 //Route::group(['middleware' => ['allowed']], function() {
 //
 //});
+Route::get('/', function () {
+    return 'Welcome to the API!';
+});
 
 Route::group(['prefix' => 'users'], function() {
     Route::get('/', 'UserController@all');
