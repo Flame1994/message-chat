@@ -20,6 +20,13 @@ Route::get('/', function () {
     return 'Welcome to the API!';
 });
 
+Route::get('/connection', function () {
+    if (DB::connection()->getPdo()) {
+        return 'Connection to DB Successful!';
+    }
+    return 'Connection to DB not successful!';
+});
+
 Route::group(['prefix' => 'users'], function() {
     Route::get('/', 'UserController@all');
     Route::post('/', 'UserController@create');
