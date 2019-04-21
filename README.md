@@ -68,7 +68,7 @@ We have two Repositories called **UserRepository** and **MessageRepository**.
 These are the current API routes that are available. You can view them in the `api.php` file in the `routes` folder.
 ```
  METHOD         URI                             Description
- --------------------------------------------------------------------------
+ --------------------------------------------------------------------------------------------------
  GET            users                           Get all users
  POST           users                           Create a user
  PUT            users                           Update a user
@@ -87,4 +87,4 @@ These are the current API routes that are available. You can view them in the `a
  GET            messages/:id                    Get message by id
  DELETE         messages/:id                    Delete message by id
 ```
-});
+
