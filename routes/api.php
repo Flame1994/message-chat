@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 //
 //});
 Route::get('/', function () {
-    return 'Welcome to the API!';
+    return 'Welcome to the Bunq chat API!';
 });
 
 Route::get('/connection', function () {
@@ -52,4 +52,8 @@ Route::group(['prefix' => 'messages'], function() {
     Route::put('/', 'MessageController@update');
     Route::get('{id}', 'MessageController@show');
     Route::delete('{id}', 'MessageController@delete');
+});
+
+Route::fallback(function(){
+    return response()->json(['message' => 'Not Found.'], 404);
 });
