@@ -54,7 +54,8 @@ you can see two relationships `from` and `to` which link to the **User** model. 
 through Eloquent and load data from the related models.
 
 ### Controllers
-Controllers are responsible for controlling the flow of the application over the HTTP requests. A request with link to a function within a specified controller, which will then be passed along to a **Service**. We have two Controllers called **UserController** and **MessageController**.
+Controllers are responsible for controlling the flow of the application over the HTTP requests. 
+A request will link to a function within a specified controller, which will then be passed along to a **Service**. We have two Controllers called **UserController** and **MessageController**.
 
 ### Services
 The logic is written within the Services. Incoming requests, validation and responses are all handled by a Service.
@@ -69,7 +70,7 @@ We have two Repositories called **UserRepository** and **MessageRepository**.
 
 ### Factories
 Factories give us an easy way to create dummy data for testing purposes. A factory can create random data for your models and
-store them to the database. To view the factories visit the `database/factories` folder. We have two factories created called
+store them to the database. To view the factories visit the `database/factories` folder. We have two factories called
 **UserFactory** and **MessageFactory**.
 
 ## API
