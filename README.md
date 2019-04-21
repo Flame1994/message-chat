@@ -96,3 +96,11 @@ http://rhaarhoff-bunq-chat.herokuapp.com/api/messages
  GET            messages/:id                    Get message by id
  DELETE         messages/:id                    Delete message by id
 ```
+
+## Testing
+A range of test cases has been created. You can view them in the `tests/Feature` folder. If you have installed
+the project correctly and ran `composer install` you should be able to run these tests. Simply run the following command to run the tests:
+```jshelllanguage
+./vendor/bin/phpunit
+```
+
