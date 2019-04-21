@@ -21,10 +21,12 @@ Route::get('/', function () {
 });
 
 Route::get('/connection', function () {
-    if (DB::connection()->getPdo()) {
-        return 'Connection to DB Successful!';
+    try {
+        DB::connection()->getPdo();
+    } catch (Exception $e) {
+        return $e;
     }
-    return 'Connection to DB not successful!';
+    return 'Connection to DB Successful!';
 });
 
 Route::group(['prefix' => 'users'], function() {
