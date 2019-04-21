@@ -5,7 +5,6 @@
 use App\Message;
 use App\User;
 use Faker\Generator as Faker;
-use Illuminate\Support\Facades\Log;
 
 $factory->define(Message::class, function (Faker $faker) {
 

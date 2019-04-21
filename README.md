@@ -67,6 +67,11 @@ The idea with this pattern is to have a generic abstract way for the app to work
 layer without being bothered with if the implementation is towards a local database or towards an online API. 
 We have two Repositories called **UserRepository** and **MessageRepository**.
 
+### Factories
+Factories give us an easy way to create dummy data for testing purposes. A factory can create random data for your models and
+store them to the database. To view the factories visit the `database/factories` folder. We have two factories created called
+**UserFactory** and **MessageFactory**.
+
 ## API
 These are the current API routes that are available. You can view them in the `api.php` file in the `routes` folder.
 
