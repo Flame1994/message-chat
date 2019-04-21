@@ -87,4 +87,3 @@ These are the current API routes that are available. You can view them in the `a
  GET            messages/:id                    Get message by id
  DELETE         messages/:id                    Delete message by id
 ```
-});
