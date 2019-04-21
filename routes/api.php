@@ -16,6 +16,18 @@ use Illuminate\Http\Request;
 //Route::group(['middleware' => ['allowed']], function() {
 //
 //});
+Route::get('/', function () {
+    return 'Welcome to the Bunq chat API!';
+});
+
+Route::get('/connection', function () {
+    try {
+        DB::connection()->getPdo();
+    } catch (Exception $e) {
+        return $e;
+    }
+    return 'Connection to DB Successful!';
+});
 
 Route::group(['prefix' => 'users'], function() {
     Route::get('/', 'UserController@all');
@@ -40,4 +52,8 @@ Route::group(['prefix' => 'messages'], function() {
     Route::put('/', 'MessageController@update');
     Route::get('{id}', 'MessageController@show');
     Route::delete('{id}', 'MessageController@delete');
+});
+
+Route::fallback(function(){
+    return response()->json(['message' => 'Not Found.'], 404);
 });

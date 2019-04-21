@@ -1,6 +1,9 @@
 # Bunq Chat
 A chat application API implementation written for the Bunq interview process using Laravel.
 
+## Deployment
+This app has been deployed to **Heroku**. You can view the demo [here](http://rhaarhoff-bunq-chat.herokuapp.com/api).
+
 ## Requirements
 There are a few things needed in order to setup this project.
 - PHP
@@ -66,6 +69,12 @@ We have two Repositories called **UserRepository** and **MessageRepository**.
 
 ## API
 These are the current API routes that are available. You can view them in the `api.php` file in the `routes` folder.
+
+To access these routes, simply use the `/api/` prefix on the url. Some examples:
+```jshelllanguage
+http://rhaarhoff-bunq-chat.herokuapp.com/api/users
+http://rhaarhoff-bunq-chat.herokuapp.com/api/messages
+``` 
 ```
  METHOD         URI                             Description
  --------------------------------------------------------------------------------------------------
@@ -87,4 +96,3 @@ These are the current API routes that are available. You can view them in the `a
  GET            messages/:id                    Get message by id
  DELETE         messages/:id                    Delete message by id
 ```
-

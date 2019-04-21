@@ -161,12 +161,11 @@ class MessageTest extends TestCase
             ]);
     }
 
-    public function testUpdateInvalidMessageTextAndRead() {
+    public function testUpdateInvalidMessageTextRead() {
         $message = factory(Message::class)->create();
         $data = [
             'id' => $message->id,
             'from_id' => $message->from_id,
-            'text' => '',
             'read' => 0
         ];
 
@@ -180,10 +179,6 @@ class MessageTest extends TestCase
                 'success' => false,
                 'code' => 422,
                 'data' => [
-                    'text' => [
-                        'The text must be a string.',
-                        'The text must be at least 1 characters.'
-                    ],
                     'read' => [
                         'The selected read is invalid.'
                     ]
