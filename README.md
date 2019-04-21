@@ -117,7 +117,7 @@ Simply import the following to your postman collections:
 https://www.getpostman.com/collections/7a7ed1622f99c3f6b122
 ``` 
 
-Import the following environment:
+Also, import the following environment:
 ```text
 {
     "id": "c43550d0-900b-4466-9077-389a9f08fb60",
