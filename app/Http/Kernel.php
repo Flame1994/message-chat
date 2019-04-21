@@ -2,12 +2,10 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\UserAllowed;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
 {
-
     /**
      * The application's route middleware groups.
      *
@@ -29,6 +27,6 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class
     ];
 }
