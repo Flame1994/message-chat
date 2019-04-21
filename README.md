@@ -28,7 +28,7 @@ $ cp .env.example .env
 ```jshelllanguage
 $ php artisan key:generate
 ```
-- Create a file called `database.sqlite` in the `database` folder.
+- Create a file called `database.sqlite` in the `storage` folder.
 - Migrate the database. You can add `--seed` if you would like to seed the database with dummy data.
 ```jshelllanguage
 $ php artisan migrate --seed
