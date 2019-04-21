@@ -50,13 +50,25 @@ class MessageService {
         $this->validate($data, array(
             'id' => 'required|integer|exists:messages,id',
             'from_id' => 'required|integer|exists:users,id',
-            'text' => 'sometimes|string|min:1|max:32',
+            'text' => 'sometimes|string|min:1|max:1024',
             'read' => 'sometimes|integer|in:1'
         ));
+
+        $record = $this->messageRepository->show($data['id']);
+        if ($record->from_id != $data['from_id']) {
+            throw new AuthenticationException('User can\'t update this message');
+        }
+
         return $this->response($this->messageRepository->update($data, $data['id']));
     }
 
     public function delete($id) {
+
+        $message = $this->messageRepository->show($id);
+
+        if (!$message) {
+            throw new AuthenticationException('Message does not exist');
+        }
 
         $this->messageRepository->delete($id);
 

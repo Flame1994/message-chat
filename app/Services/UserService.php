@@ -37,7 +37,7 @@ class UserService {
         $this->validate($data, array(
             'first_name' => 'required|string|min:1|max:32',
             'last_name' => 'required|string|min:1|max:32',
-            'username' => 'required|string|min:6|max:32|unique:users,username'
+            'username' => 'required|string|min:5|max:32|unique:users,username'
         ));
 
         return $this->response($this->userRepository->create($data));
@@ -48,7 +48,7 @@ class UserService {
             'id' => 'required|integer|exists:users,id',
             'first_name' => 'sometimes|string|min:1|max:32',
             'last_name' => 'sometimes|string|min:1|max:32',
-            'username' => 'sometimes|string|min:6|max:32|unique:users,username'
+            'username' => 'sometimes|string|min:5|max:32|unique:users,username'
         ));
 
         $this->userRepository->update($data, $data['id']);
@@ -57,6 +57,11 @@ class UserService {
     }
 
     public function delete($id) {
+        $user = $this->userRepository->show($id);
+
+        if (!$user) {
+            throw new AuthenticationException('User does not exist');
+        }
 
         $this->userRepository->delete($id);
 
