@@ -109,3 +109,31 @@ the project correctly and ran `composer install` you should be able to run these
 ./vendor/bin/phpunit
 ```
 
+### Collection
+A [Postman](https://www.getpostman.com/) collection has been created in order to test the API easily.
+
+Simply import the following to your postman collections:
+```jshelllanguage
+https://www.getpostman.com/collections/7a7ed1622f99c3f6b122
+``` 
+
+Import the following environment:
+```text
+{
+    "id": "c43550d0-900b-4466-9077-389a9f08fb60",
+    "name": "BUNQ CHAT PRODUCTION",
+    "values": [
+        {
+            "key": "url",
+            "value": "https://rhaarhoff-bunq-chat.herokuapp.com/",
+            "description": "",
+            "enabled": true
+        }
+    ],
+    "_postman_variable_scope": "environment",
+    "_postman_exported_at": "2019-04-21T23:44:38.080Z",
+    "_postman_exported_using": "Postman/7.0.7"
+}
+```
+
+After these have been imported, select the correct environment and start testing.
