@@ -143,6 +143,11 @@ return [
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+
+        /*
+         * Package Service Providers...
+         */
 
         /*
          * Application Service Providers...
