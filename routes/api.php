@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 //
 //});
 Route::get('/', function () {
-    return 'Welcome to the Bunq chat API!';
+    return view('home');
 });
 
 Route::get('/connection', function () {

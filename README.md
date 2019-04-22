@@ -93,7 +93,7 @@ http://rhaarhoff-bunq-chat.herokuapp.com/api/messages
  GET            users/:id/messages/inc          Get all incoming messages of user
  GET            users/:id/messages/inc/:from    Get all incoming messages of user from another user
  GET            users/:id/messages/out          Get all outgoing messages of user
- GET            users/:id/messages/out/:to      Get all outgoing messages of user from another user
+ GET            users/:id/messages/out/:to      Get all outgoing messages of user to another user
  GET            users/:id/messages/all/:user    Get all messages between two users (in order)
  
  GET            messages                        Get all messages
