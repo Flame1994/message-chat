@@ -82,22 +82,22 @@
         }
 
         .get {
-            color: #8ee569;
+            color: #62B54F;
             font-weight: bold;
         }
 
         .post {
-            color: #e5c669;
+            color: #F5C836;
             font-weight: bold;
         }
 
         .put {
-            color: #69a0e5;
+            color: #2772BB;
             font-weight: bold;
         }
 
         .delete {
-            color: #e56969;
+            color: #E02F2F;
             font-weight: bold;
         }
 
