@@ -41,7 +41,7 @@
         }
 
         .content {
-            text-align: center;
+            text-align: left;
         }
 
         .title {
@@ -99,6 +99,15 @@
         .delete {
             color: #e56969;
             font-weight: bold;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #636b6f;
         }
     </style>
 </head>
@@ -208,6 +217,13 @@
                 <td>Delete message by id</td>
             </tr>
         </table>
+        <p>
+            <span>Examples</span><br>
+            <a target="_blank" href="{{env('APP_URL')}}/api/users">{{env('APP_URL')}}/api/users</a><br>
+            <a target="_blank" href="{{env('APP_URL')}}/api/users/1">{{env('APP_URL')}}/api/users/1</a><br>
+            <a target="_blank" href="{{env('APP_URL')}}/api/users/1/messages">{{env('APP_URL')}}/api/users/1/messages</a><br>
+            <a target="_blank" href="{{env('APP_URL')}}/api/messages">{{env('APP_URL')}}/api/messages</a><br>
+        </p>
     </div>
 </div>
 </body>
